@@ -1321,27 +1321,51 @@
 				padding: 1em 0 1.25em 0;
 			}
 			
+			#main .test3 {
+				position: relative;
+				top: -14em;
+				left: 10em;
+				height: 10.6em;
+				width: 12em;
+				 background:transparent;
+				border: 0;
+				opacity: 0;		
+				cursor: pointer; 
+			}
 		
 			#main .test {
 				position: relative;
-				top: -60em;
-				left: 1.7em;
-				background:transparent;
+				top: -59.4em;
+				left: 12.8em;
+				height: 9.6em;
+				width: 13.5em;
+			   background:transparent;
 				border: 0;
 				opacity: 0;		
-				cursor: pointer;
+				cursor: pointer; 
 			}
 
 			#main .test1 {
 				position: relative;
-				top: -60em;
-				left: 1.7em;
-				background:transparent;
-				border: 0;
-				opacity: 0;		
+				top: -14em;
+				left: -22em;
+				height: 10.6em;
+				width: 12em;
+				background: transparent;
+				opacity: 0;
 				cursor: pointer;
 			}
 
+			#main .Thing {
+
+				position: center;
+				top: --1000em;
+				left: -22em;
+				
+
+			}
+
+			
 			
 			
 
