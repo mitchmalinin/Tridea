@@ -1328,9 +1328,21 @@
 				left: 1.7em;
 				background:transparent;
 				border: 0;
-				font-size: 1;				
+				opacity: 0;		
 				cursor: pointer;
 			}
+
+			#main .test1 {
+				position: relative;
+				top: -60em;
+				left: 1.7em;
+				background:transparent;
+				border: 0;
+				opacity: 0;		
+				cursor: pointer;
+			}
+
+			
 			
 
 	body.landing #main {
