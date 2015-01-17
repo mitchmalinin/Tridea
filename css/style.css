@@ -515,6 +515,12 @@
 				.box .image.featured:last-child img {
 					border-radius: 0 0 6px 6px;
 				}
+				#main .Nick
+				{
+
+				position: right;
+		
+				}
 
 /* Icon */
 
@@ -1310,7 +1316,10 @@
 				margin: 0;
 			}
 			
-			
+			#main  .box.Nick {
+				position: relative;
+				right: 50em;
+			}
 			
 			#main > header p {
 				border-top: solid 2px #e5e5e5;
@@ -1324,7 +1333,7 @@
 			#main .test3 {
 				position: relative;
 				top: -14em;
-				left: 10em;
+				left: 5em;
 				height: 10.6em;
 				width: 12em;
 				 background:transparent;
@@ -1335,8 +1344,8 @@
 		
 			#main .test {
 				position: relative;
-				top: -59.4em;
-				left: 12.8em;
+				top: -42em;
+				left: -30em;
 				height: 9.6em;
 				width: 13.5em;
 			   background:transparent;
@@ -1348,7 +1357,7 @@
 			#main .test1 {
 				position: relative;
 				top: -14em;
-				left: -22em;
+				left: -20em;
 				height: 10.6em;
 				width: 12em;
 				background: transparent;
@@ -1356,16 +1365,22 @@
 				cursor: pointer;
 			}
 
-			#main .Thing {
+			#main .Background1 {
 
-				position: center;
-				top: --1000em;
-				left: -22em;
+				position:center;
+    		
 				
-
 			}
+			#main .imageFeatured
+			{
 
+				position:absolute;
+				position: center;
+				top: 52em;
+				left: 15em;	
+			}
 			
+
 			
 			
 
