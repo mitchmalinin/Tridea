@@ -8,7 +8,7 @@ EMAIL_RECIPIENTS - your email address where you want to get the form submission.
 */
 
 $email_recipients = 'jmatsnev@gmail.com';//<<=== enter your email address here
-$email_recipients =  "mitchmalinin@gmail.com,nverdi20@yahoo.com"; <<=== more than one recipients like this
+$email_recipients =  "mitchmalinin@gmail.com,nverdi20@yahoo.com";// <<=== more than one recipients like this
 
 
 $visitors_email_field = 'email';//The name of the field where your user enters their email address
