@@ -43,7 +43,9 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		display:inline-block;
+		vertical-align:top;
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -68,6 +70,7 @@
 		font-size: 1.75em;
 		line-height: 1.5em;
 		letter-spacing: -0.025em;
+		margin: 0 0 0em 12em;
 	}
 
 	h4 {
@@ -84,8 +87,9 @@
 
 	h6 {
 		font-size: 0.7em;
-		line-height: 1.5em;
+		line-height: 0;
 		letter-spacing: 0;
+		
 	}
 
 	sub {
@@ -1332,37 +1336,34 @@
 			
 			#main .test3 {
 				position: relative;
-				top: -14em;
-				left: 5em;
+				top: -15em;
+				left: 1em;
 				height: 10.6em;
 				width: 12em;
 				 background:transparent;
 				border: 0;
-				opacity: 0;		
 				cursor: pointer; 
 			}
 		
 			#main .test {
 				position: relative;
-				top: -42em;
-				left: -30em;
+				top: -35em;
+				left: -27em;
 				height: 9.6em;
 				width: 13.5em;
-			   background:transparent;
+			  	background:transparent;
 				border: 0;
-				opacity: 0;		
 				cursor: pointer; 
 			}
 
 			#main .test1 {
 				position: relative;
-				top: -14em;
-				left: -20em;
+				top: -15em;
+				left: -15em;
 				height: 10.6em;
 				width: 12em;
 				background: transparent;
-				opacity: 0;
-				cursor: pointer;
+				cursor: pointer; 
 			}
 
 			#main .Background1 {
