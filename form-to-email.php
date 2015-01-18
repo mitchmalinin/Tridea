@@ -1,123 +1,155 @@
 <?php
+
+if(isset($_POST['email_id'])) {
+
+ 
+
+// EDIT THE 2 LINES BELOW AS REQUIRED
+
+$email_to = "jmatsnev@gmail.com";  // This email address will recieve the data of form.html
+
+$email_subject = "Subject part of email";   // This would be the subject of email that you will recieve
+
+ 
+
+function catch_error($error) {
+
+// Put error message here that you want to be displayed to user
+
+echo "Problem encountered with the form you submitted!. <br />";
+
+echo "Following error occured with your form please fix.<br /><br />";
+
+echo $error."<br /><br />";
+
+ 
+
+die();
+
+}
+
+ 
+
+// validation expected data exists
+
+if(!isset($_POST['fname']) ||
+
+!isset($_POST['lname']) ||
+
+!isset($_POST['email_id']) ||
+
+!isset($_POST['comment'])) {
+
+died('There is a problem with the form u submitted.Please Resubmit');
+
+}
+
+ 
+
+$fname = $_POST['fname']; // required
+
+$lname = $_POST['lname']; // required
+
+$email_id = $_POST['email_id']; // required
+
+$website = $_POST['website_url']; // not required
+
+$comment = $_POST['comment']; // required
+
+ 
+
+$error_message = "";
+
+//Using regular expressions for email id validation
+
+$email_verfiy = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+
+if(!preg_match($email_verfiy,$email_id)) {
+
+$error_message .= 'The Email Address you entered is not valid.<br />';
+
+}
+
+$name_verify = "/^[A-Za-z .'-]+$/";
+
+//Using regular expressions for name validation
+
+if(!preg_match($name_verify,$fname)) {
+
+$error_message .= 'The First Name you entered is not valid.<br />';
+
+}
+
+if(!preg_match($name_verify,$lname)) {
+
+$error_message .= 'The Last Name you entered is not valid.<br />';
+
+}
+
+if(!filter_var($website, FILTER_VALIDATE_URL)){
+
+// Website URL validation
+
+$error_message .='Your Website URL is not valid. <br />';
+
+}
+
+if(strlen($comment) < 2) {
+
+$error_message .= 'The Comment you entered is not valid.<br />';
+
+}
+
+if(strlen($error_message) > 0) {
+
+catch_error($error_message);
+
+}
+
+$email_message = "Form details below.\n\n";
+
+ 
+
+function clean_text($string) {
+
+$bad = array("content-type","bcc:","to:","cc:","href");
+
+return str_replace($bad,"",$string);
+
+}
+
+ 
+
+$email_message .= "First Name: ".clean_text($fname)."\n";
+
+$email_message .= "Last Name: ".clean_text($lname)."\n";
+
+$email_message .= "Email: ".clean_text($email_id)."\n";
+
+$email_message .= "Website: ".clean_text($website)."\n";
+
+$email_message .= "Comments: ".clean_text($comment)."\n";
+
+ 
+
+@mail($email_to, $email_subject, $email_message);
+
+
+
 /*
-Configuration 
-You are to edit these configuration values. Not all of them need to be edited.
-However, the first few obviously need to be edited.
-EMAIL_RECIPIENTS - your email address where you want to get the form submission.
+71
+Put your custom message here or redirect user to any other page
+72
+after successful submission of form.<br/>
+73
+for example a simple message like this:<br /> */
 
-*/
+echo "Your form has been Submitted Successfuly.!!
+75
+We will be back to you ASAP";
 
-$email_recipients = 'jmatsnev@gmail.com';//<<=== enter your email address here
-$email_recipients =  "mitchmalinin@gmail.com,nverdi20@yahoo.com";// <<=== more than one recipients like this
+ 
 
-
-$visitors_email_field = 'email';//The name of the field where your user enters their email address
-                                        //This is handy when you want to reply to your users via email
-                                        //The script will set the reply-to header of the email to this email
-                                        //Leave blank if there is no email field in your form
-$email_subject = "New Form submission";
-
-$enable_auto_response = true;//Make this false if you donot want auto-response.
-
-//Update the following auto-response to the user
-$auto_response_subj = "Thanks for contacting us";
-$auto_response ="
-Hi
-
-Thanks for contacting us. We will get back to you soon!
-
-Regards
-Your website
-";
-
-/*optional settings. better leave it as is for the first time*/
-$email_from = ''; /*From address for the emails*/
-$thank_you_url = 'index.html';/*URL to redirect to, after successful form submission*/
-
-/*
-This is the PHP back-end script that processes the form submission.
-It first validates the input and then emails the form submission.
-The variable $_POST contains the form submission data.
-*/
-if(!isset($_POST['submit']))
-{
-    // note that our submit button's name is 'submit' 
-    // We are checking whether submit button is pressed
-	// This page should not be accessed directly. Need to submit the form.
-	echo "error; you need to submit the form!".print_r($_POST,true);
-    exit;
 }
 
-require_once "includes/formvalidator.php";
-//Setup Validations
-$validator = new FormValidator();
-$validator->addValidation("fullname","req","Please fill in Name");
-$validator->addValidation("email","req","Please fill in Email");
-//Now, validate the form
-if(false == $validator->ValidateForm())
-{
-    echo "<B>Validation Errors:</B>";
-
-    $error_hash = $validator->GetErrors();
-    foreach($error_hash as $inpname => $inp_err)
-    {
-        echo "<p>$inpname : $inp_err</p>\n";
-    }
-    exit;
-}
-
-$visitor_email='';
-if(!empty($visitors_email_field))
-{
-    $visitor_email = $_POST[$visitors_email_field];
-}
-
-if(empty($email_from))
-{
-    $host = $_SERVER['SERVER_NAME'];
-    $email_from ="forms@$host";
-}
-
-$fieldtable = '';
-foreach ($_POST as $field => $value)
-{
-    if($field == 'submit')
-    {
-        continue;
-    }
-    if(is_array($value))
-    {
-        $value = implode(", ", $value);
-    }
-    $fieldtable .= "$field: $value\n";
-}
-
-$extra_info = "User's IP Address: ".$_SERVER['REMOTE_ADDR']."\n";
-
-$email_body = "You have received a new form submission. Details below:\n$fieldtable\n $extra_info";
-    
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
-//Send the email!
-@mail(/*to*/$email_recipients, $email_subject, $email_body,$headers);
-
-//Now send an auto-response to the user who submitted the form
-if($enable_auto_response == true && !empty($visitor_email))
-{
-    $headers = "From: $email_from \r\n";
-    @mail(/*to*/$visitor_email, $auto_response_subj, $auto_response,$headers);
-}
-
-//done. 
-if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])
-    AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') 
-{
-    //This is an ajax form. So we return success as a signal of succesful processing
-    echo "success";
-}
-else
-{
-    //This is not an ajax form. we redirect the user to a Thank you page
-    header('Location: '.$thank_you_url);
-}
 ?>
