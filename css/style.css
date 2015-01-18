@@ -11,7 +11,7 @@
 
 	body, input, select, textarea {
 		color: #777;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: "Comic Sans MS", sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
@@ -1336,7 +1336,7 @@
 			
 			#main .test3 {
 				position: relative;
-				top: -15em;
+				top: -11em;
 				left: 1em;
 				height: 10.6em;
 				width: 12em;
@@ -1347,8 +1347,8 @@
 		
 			#main .test {
 				position: relative;
-				top: -35em;
-				left: -27em;
+				top: -36.8em;
+				left: -26.95em;
 				height: 9.6em;
 				width: 13.5em;
 			  	background:transparent;
@@ -1358,7 +1358,7 @@
 
 			#main .test1 {
 				position: relative;
-				top: -15em;
+				top: -11em;
 				left: -15em;
 				height: 10.6em;
 				width: 12em;
