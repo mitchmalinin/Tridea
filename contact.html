@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Contact - Alpha by HTML5 UP</title>
+		<title>Contact - Tridea</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -17,32 +17,28 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
+			
+			
+			
 		</noscript>
+		
+		
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li>
-							<a href="" class="icon fa-angle-down">Layouts</a>
+							<a href="" class="icon fa-angle-down">More</a>
 							<ul>
-								<li><a href="generic.html">Generic</a></li>
+								<li><a href="generic.html">About Us</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li><a href="elements.html">Elements</a></li>
-								<li>
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Option One</a></li>
-										<li><a href="#">Option Two</a></li>
-										<li><a href="#">Option Three</a></li>
-										<li><a href="#">Option Four</a></li>
-									</ul>
-								</li>
+					
 							</ul>
 						</li>
 						<li><a href="#" class="button">Sign Up</a></li>
@@ -57,13 +53,14 @@
 					<p>Tell us what you think about our little operation.</p>
 				</header>
 				<div class="box">
-					<form method="post" action="#">
+
+					<form action="form-to-email.php"  method="POST"  >
 						<div class="row uniform 50%">
 							<div class="6u 12u(3)">
-								<input type="text" name="name" id="name" value="" placeholder="Name" />
+								<input class="fullname" type="text" name="fullname" id="name" value="" placeholder="Name" />
 							</div>
 							<div class="6u 12u(3)">
-								<input type="email" name="email" id="email" value="" placeholder="Email" />
+								<input class="email" type="email" name="email" id="email" value="" placeholder="Email" />
 							</div>
 						</div>
 						<div class="row uniform 50%">
@@ -73,28 +70,29 @@
 						</div>
 						<div class="row uniform 50%">
 							<div class="12u">
-								<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+								<textarea class="message" name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 							</div>
 						</div>
 						<div class="row uniform">
 							<div class="12u">
 								<ul class="actions align-center">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type='submit' name='submit' id='submit' value="Send Message"/></li>
 								</ul>
 							</div>
 						</div>
 					</form>
+					
 				</div>
 			</section>
 			
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://twitter.com/TrideaOffical" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/TrideaTrideaTridea" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="https://github.com/mitchmalinin/Tridea" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="http://bigassmessage.com/76943#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 					<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 				</ul>
 				<ul class="copyright">
@@ -104,6 +102,11 @@
 
 				</ul>
 			</footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 	</body>
 </html>
