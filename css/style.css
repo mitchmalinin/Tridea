@@ -438,8 +438,8 @@
 			}
 
 			.box.features .features-row section {
-				float: left;
-				padding: 4em;
+				float: right;
+				padding: 3em;
 				width: 50%;
 			}
 
