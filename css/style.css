@@ -1256,6 +1256,14 @@
 			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
+		
+		#banner h4 {
+			font-size: 1.5em;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+		}
+		
 
 		#banner p {
 			font-size: 1.25em;
