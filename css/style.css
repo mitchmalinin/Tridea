@@ -1230,10 +1230,10 @@
 
 	#banner {
 		background-attachment: scroll,							fixed;
-		background-color: #666;
-		background-image: url("images/overlay.png"), url("../images/banner1.jpg");
-		background-position: top left,						center center;
-		background-repeat: repeat,							no-repeat;
+		background-color: #2C3E50;
+		background-image: url("../Logos/Untitled-12.png");
+		background-position:	center center;
+		background-repeat: no-repeat;
 		background-size: auto,							cover;
 		color: #fff;
 		padding: 12em 0 20em 0;
@@ -1263,7 +1263,7 @@
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
-			margin-bottom:2em;
+			margin-bottom:1em;
 		}
 		
 
@@ -1454,7 +1454,7 @@
 /* CTA */
 
 	#cta {
-		background: #e89980;
+		background: #2C3E50;
 		color: #f9e5df;
 		padding: 3.5em 0 4em 0;
 		text-align: center;
