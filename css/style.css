@@ -1280,6 +1280,8 @@
 			box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 			color: #fff;
 			min-width: 12em;
+			margin-bottom:2em;
+			opacity:0;
 		}
 		#banner .typeform {
 			background-color: #62A584;
