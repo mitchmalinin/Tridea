@@ -413,6 +413,9 @@
 		box-shadow: 0 2px 0 0 #e5e5e5;
 		margin: 0 0 2em 0;
 		padding: 3em;
+		display:inline-block;
+		
+		
 	}
 	
 	 .box > .rotate90 {
@@ -422,6 +425,9 @@
 		    -ms-transform: rotate(90deg);
 		    transform: rotate(90deg);
 		}
+		
+	
+		
 	
 
 		.box > :last-child {
@@ -457,11 +463,11 @@
 					margin-bottom: 0;
 				}
 
-				.box.features .features-row section:nth-child(2n) {
+				.box.features .features-row section:nth-child(3n) {
 					padding-right: 0;
 				}
 
-					.box.features .features-row section:nth-child(2n):before {
+					.box.features .features-row section:nth-child(3n):before {
 						background: #e5e5e5;
 						content: '';
 						display: block;
@@ -472,7 +478,7 @@
 						width: 2px;
 					}
 
-				.box.features .features-row section:nth-child(2n-1) {
+				.box.features .features-row section:nth-child(3n-1) {
 					padding-left: 0;
 				}
 
@@ -508,6 +514,8 @@
 				border-radius: 0;
 				display: block;
 				width: 100%;
+				float:left;
+				
 			}
 
 			.box .image.featured:first-child {
@@ -529,11 +537,24 @@
 				.box .image.featured:last-child img {
 					border-radius: 0 0 6px 6px;
 				}
-				#main .Nick
-				{
-
-				position: right;
-		
+				
+				.box figure {
+				    display: inline-block;
+				    border:1px solid #2C3E50 ;
+				    margin: 27px;
+				}
+				.box figure img {
+				    vertical-align: top;
+				}
+				.box figure figcaption {
+				    border: 0px solid white;
+				    text-align: center;
+					background-color:#2C3E50;
+					color:white;
+				}
+				.box figure figcaption figcaption {
+					font-style: italic;
+					
 				}
 
 /* Icon */
