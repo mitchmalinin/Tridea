@@ -414,6 +414,15 @@
 		margin: 0 0 2em 0;
 		padding: 3em;
 	}
+	
+	 .box > .rotate90 {
+		    -webkit-transform: rotate(90deg);
+		    -moz-transform: rotate(90deg);
+		    -o-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		    transform: rotate(90deg);
+		}
+	
 
 		.box > :last-child {
 			margin-bottom: 0;
@@ -1005,6 +1014,7 @@
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		background-color:#2C3E50;
 	}
 
 		#header h1 {
@@ -1079,6 +1089,7 @@
 					#header nav > ul > li .button {
 						margin: 0 0 0 0.5em;
 						position: relative;
+						
 					}
 
 		#header input[type="submit"],
