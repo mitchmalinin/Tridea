@@ -426,7 +426,9 @@
 		    transform: rotate(90deg);
 		}
 		
-	
+		.box h3 {
+			text-align:center;
+		}
 		
 	
 
