@@ -65,6 +65,11 @@
 			color:#2C3E50;
 		}
 
+	h1 {
+		font-size:2.7em;
+		line-height:1.5em;
+		letter-spacing:-0.045;	
+	   }
 	h2 {
 		font-size: 2.25em;
 		line-height: 1.5em;
@@ -429,13 +434,13 @@
 		    transform: rotate(90deg);
 		}
 		
-		.box h3 {
-			position:relative;
-			text-align:center;
-			
-		}
 		
-	
+		
+		.box h2 {
+			text-align:center;
+			text-decoration: underline;
+			color:#2C3E50;
+		}
 
 		.box > :last-child {
 			margin-bottom: 0;
@@ -562,6 +567,19 @@
 				.box figure figcaption figcaption {
 					font-style: italic;
 					
+				}
+				
+/*ROW*/
+				.row h3 {
+					margin-left:11em;
+					color:#2C3E50;
+					text-decoration: underline;
+					
+				}
+				
+				.row p {
+					color:black;
+					text-align:center;
 				}
 
 /* Icon */
