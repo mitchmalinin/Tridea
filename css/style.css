@@ -420,13 +420,21 @@
 /* Box */
 
 	.box {
-		background: #2C3E50;
+		background: #FFF;
 		border-radius: 6px;
 		box-shadow: 0 2px 0 0 #e5e5e5;
 		margin: 0 0 2em 0;
 		padding: 3em;
 		
 		
+	}
+	
+	.box2 {
+		background: #2C3E50;
+		border-radius: 6px;
+		box-shadow: 0 2px 0 0 #e5e5e5;
+		margin: 0 0 2em 0;
+		padding: 3em;
 	}
 	
 	 .box > .rotate90 {
