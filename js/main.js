@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function () {
 
     $("#contact-form").validate({
@@ -60,7 +59,6 @@ $(document).ready(function () {
     });
 
 });
-=======
 console.log('we made it');
 
 $("#submit").click(function() {
@@ -82,4 +80,4 @@ $("#submit").click(function() {
 }	
 
 });
->>>>>>> 490b37ac0add5d9b343c63fb5cb032bb3815041a
+
