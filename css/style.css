@@ -745,6 +745,7 @@
 				}
 				#cd-team li {
 				  margin-bottom: 2em;
+				  margin-left: 5.7em;
 				  border-radius: 0.25em;
 				  box-shadow: 0 0 10px rgba(92, 75, 81, 0);
 				  -webkit-transition: all 0.3s;
@@ -809,6 +810,12 @@
 				  font-size: 0.875rem;
 				  margin-top: .5em;
 				}
+				#cd-team .dannymoved {
+				    position: relative;
+				       left: 30px;
+				}
+				
+				
 				@media only screen and (min-width: 768px) {
 				  #cd-team li {
 				    width: 31%;
